@@ -1,0 +1,29 @@
+[project]
+name = "octmole"
+version = "0.1.0"
+description = "Multiscale 3D molecular generation with hierarchical spatial flows"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "einops==0.8.1",
+    "lmdb",
+    "numpy",
+    "openbabel==3.2.1",
+    "rdkit",
+    "tensorboard",
+    "torch==2.11.0",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

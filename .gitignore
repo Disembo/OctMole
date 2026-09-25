@@ -1,0 +1,11 @@
+data/
+.vscode/
+__pycache__/
+*.py[cod]
+output/
+run.sh
+*.png
+logs/
+.DS_Store
+.venv/
+runs/
