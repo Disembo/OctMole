@@ -55,13 +55,19 @@ The default scripts use a finest octree depth of 6, corresponding to a
 
 ## Inference with pretrained checkpoints
 
-Pretrained checkpoints for QM9 and GEOM-DRUG will be available for download.
+Pretrained checkpoints for QM9 and GEOM-DRUG are available from the
+[OctMole checkpoint repository](https://huggingface.co/octmole-author/octmole):
+
+| Dataset | Occupancy model (Stage 1) | Atom model (Stage 2) |
+|---|---|---|
+| QM9 | `qm9-stage1.pth` | `qm9-stage2.pth` |
+| GEOM-DRUG | `drug-stage1.pth` | `drug-stage2.pth` |
 
 Generate 10,000 reranked final molecules with the two pretrained checkpoints:
 
 ```bash
-STAGE1_MODEL=/path/to/pth STAGE2_MODEL=/path/to/pth bash scripts/sample_qm9.sh
-STAGE1_MODEL=/path/to/pth STAGE2_MODEL=/path/to/pth bash scripts/sample_drug.sh
+STAGE1_MODEL=/path/to/qm9-stage1.pth STAGE2_MODEL=/path/to/qm9-stage2.pth bash scripts/sample_qm9.sh
+STAGE1_MODEL=/path/to/drug-stage1.pth STAGE2_MODEL=/path/to/drug-stage2.pth bash scripts/sample_drug.sh
 ```
 
 You can override the number of visible gpus based on your devices.
