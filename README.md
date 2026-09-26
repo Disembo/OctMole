@@ -24,8 +24,10 @@ uv sync
 
 ## Training from scratch
 
-We train separate models on the QM9 and GEOM-DRUG datasets. Download both
-datasets (possibly from Uni-3DAR's huggingface) and organize them using the following layout:
+We train separate models on the QM9 and GEOM-DRUG datasets. Download
+`qm9_data.tar.gz` and `drug_data.tar.gz` from the
+[Uni-3DAR Hugging Face repository](https://huggingface.co/dptech/Uni-3DAR/tree/main),
+extract them, and organize each dataset using the following layout:
 
 ```text
 DATA_PATH/
@@ -36,15 +38,15 @@ DATA_PATH/
 Train the occupancy and atom models for QM9:
 
 ```bash
-DATA_PATH=xxx bash scripts/run_qm9_oct64.sh   # default bsz = 128 * 4 GPUS = 512
-DATA_PATH=xxx bash scripts/run_qm9_feat64.sh  # default bsz = 256 * 4 GPUS = 1024
+DATA_PATH=xxx bash scripts/run_qm9_oct64.sh   # default bsz = 256 * 4 GPUs = 1024
+DATA_PATH=xxx bash scripts/run_qm9_feat64.sh  # default bsz = 256 * 4 GPUs = 1024
 ```
 
 Train the occupancy and atom models for GEOM-DRUG:
 
 ```bash
-DATA_PATH=xxx bash scripts/run_drug_oct64.sh   # default bsz = 128 * 8 GPUS = 1024
-DATA_PATH=xxx bash scripts/run_drug_feat64.sh  # default bsz = 128 * 8 GPUS = 1024
+DATA_PATH=xxx bash scripts/run_drug_oct64.sh   # default bsz = 128 * 8 GPUs = 1024
+DATA_PATH=xxx bash scripts/run_drug_feat64.sh  # default bsz = 128 * 8 GPUs = 1024
 ```
 
 You can override the number of visible gpus based on your devices.
