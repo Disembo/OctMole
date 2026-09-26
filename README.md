@@ -43,8 +43,8 @@ DATA_PATH=xxx bash scripts/run_qm9_feat64.sh  # default bsz = 256 * 4 GPUS = 102
 Train the occupancy and atom models for GEOM-DRUG:
 
 ```bash
-DATA_PATH=xxx bash scripts/run_drug_oct64.sh   # default bsz = 128 * 4 GPUS = 512
-DATA_PATH=xxx bash scripts/run_drug_feat64.sh  # default bsz = 128 * 4 GPUS = 512
+DATA_PATH=xxx bash scripts/run_drug_oct64.sh   # default bsz = 128 * 8 GPUS = 1024
+DATA_PATH=xxx bash scripts/run_drug_feat64.sh  # default bsz = 128 * 8 GPUS = 1024
 ```
 
 You can override the number of visible gpus based on your devices.
