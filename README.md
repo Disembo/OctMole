@@ -1,5 +1,8 @@
 # OctMole: Multiscale 3D Molecular Generation with Hierarchical Spatial Flows
 
+A 3D molecule generative model jointly conducted by researchers from Peking
+University and BAAI; the paper is available [here](TODO).
+
 OctMole is a two-stage generative model for 3D molecules. The first stage
 generates a sparse hierarchical occupancy octree. The second stage predicts an
 atom type and a continuous within-cell coordinate for every occupied leaf.
@@ -56,7 +59,7 @@ The default scripts use a finest octree depth of 6, corresponding to a
 ## Inference with pretrained checkpoints
 
 Pretrained checkpoints for QM9 and GEOM-DRUG are available from the
-[OctMole checkpoint repository](https://huggingface.co/octmole-author/octmole):
+[OctMole checkpoint repository](https://huggingface.co/Disembo/octmole):
 
 | Dataset | Occupancy model (Stage 1) | Atom model (Stage 2) |
 |---|---|---|
